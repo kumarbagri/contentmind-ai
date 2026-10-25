@@ -32,6 +32,7 @@
     "email":"mailto:dhirendrabagri@zohomail.in","url":"https://www.linkedin.com/in/dhirendra-bagri-69977031b"}
 }
 </script>
+
 <style id="site-css">
 :root{
     --bg:#07070d; --bg2:#0c0c16; --card:#111120; --card2:#151527; --line:#22223a;
@@ -384,6 +385,59 @@ a.post .readmore{margin-top:auto;font-size:.86rem;font-weight:700;color:var(--ac
   </div>
 </section>
 
+<section id="work" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><span class="kicker">Work with us</span><h2>Let's build your content engine.</h2>
+      <p>Pick the engagement that fits where you are right now — every one starts with your voice.</p></div>
+    <div class="grid g3">
+      <div class="card">
+        <div class="ico">✍️</div>
+        <h3>Founder ghostwriting</h3>
+        <p>Monthly LinkedIn content written in your voice — stay visible without living on the app.</p>
+        <p style="margin-top:14px"><a href="contact.html" class="btn btn-primary" style="padding:9px 16px">Enquire →</a></p>
+      </div>
+      <div class="card">
+        <div class="ico">⚡</div>
+        <h3>AI content system</h3>
+        <p>A custom prompt library and workflow so you and your team produce quality content consistently.</p>
+        <p style="margin-top:14px"><a href="contact.html" class="btn btn-primary" style="padding:9px 16px">Enquire →</a></p>
+      </div>
+      <div class="card">
+        <div class="ico">🎯</div>
+        <h3>1:1 content strategy</h3>
+        <p>A focused session to map your positioning, content pillars and a 90-day publishing calendar.</p>
+        <p style="margin-top:14px"><a href="contact.html" class="btn btn-primary" style="padding:9px 16px">Book a call →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="products" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><span class="kicker">Products</span><h2>Tools &amp; resources.</h2>
+      <p>Small, practical products to help you create faster — launching soon. Join the waitlist.</p></div>
+    <div class="grid g3">
+      <div class="card"><div class="ico">📦</div><h3>LinkedIn Post Prompt Pack</h3><p>50 ready-to-use prompts for founders — turn any idea into a week of posts.</p><p style="margin-top:14px"><a href="contact.html" class="btn btn-ghost" style="padding:9px 16px">Join waitlist →</a></p></div>
+      <div class="card"><div class="ico">🎓</div><h3>Founder Content Course</h3><p>A short course on building a personal brand with AI — without sounding like AI.</p><p style="margin-top:14px"><a href="contact.html" class="btn btn-ghost" style="padding:9px 16px">Join waitlist →</a></p></div>
+      <div class="card"><div class="ico">🚀</div><h3>Ghostwriting Sprint</h3><p>A 2-week sprint to kickstart your LinkedIn with a batch of high-quality posts.</p><p style="margin-top:14px"><a href="contact.html" class="btn btn-ghost" style="padding:9px 16px">Enquire →</a></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="newsletter" style="padding-top:0">
+  <div class="wrap">
+    <div class="contact" style="padding:48px 24px">
+      <h2>One useful idea on <span class="grad">AI &amp; content</span> every week.</h2>
+      <p>No fluff — just practical notes for founders who want to be heard. Join the list.</p>
+      <form class="form" id="nlForm" style="max-width:440px;margin:26px auto 0;text-align:left">
+        <input type="email" id="nlEmail" placeholder="you@example.com" required />
+        <button type="submit" class="btn btn-primary" style="justify-content:center">Subscribe →</button>
+        <p class="note">Subscribe opens your email app to confirm. Only useful emails — unsubscribe anytime.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
 <section id="contact">
   <div class="wrap">
     <div class="contact">
@@ -407,5 +461,19 @@ a.post .readmore{margin-top:auto;font-size:.86rem;font-weight:700;color:var(--ac
     <div><a href="https://www.linkedin.com/in/dhirendra-bagri-69977031b" target="_blank" rel="noopener">LinkedIn</a> &nbsp;·&nbsp; <a href="mailto:dhirendrabagri@zohomail.in">Email</a></div>
   </div>
 </footer>
+
+<script>
+(function(){
+  var f=document.getElementById("nlForm");
+  if(!f) return;
+  f.addEventListener("submit",function(e){
+    e.preventDefault();
+    var em=document.getElementById("nlEmail").value;
+    var s=encodeURIComponent("Newsletter subscribe — ContentMind AI");
+    var b=encodeURIComponent("Please add me to the ContentMind AI newsletter.\nEmail: "+em);
+    window.location.href="mailto:dhirendrabagri@zohomail.in?subject="+s+"&body="+b;
+  });
+})();
+</script>
 </body>
 </html>
