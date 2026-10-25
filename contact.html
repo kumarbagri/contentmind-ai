@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact ContentMind AI — Work with Dr Dhirendra Bagri</title>
+<meta name="description" content="Get in touch with ContentMind AI. Email dhirendrabagri@zohomail.in or connect on LinkedIn to discuss ghostwriting, AI content systems and content strategy for founders." />
+<meta name="keywords" content="contact ContentMind AI, hire ghostwriter for founders, AI content consultant, Dhirendra Bagri contact" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://kumarbagri.github.io/contentmind-ai/contact.html" />
+<meta name="theme-color" content="#08080f" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Contact ContentMind AI" />
+<meta property="og:description" content="Let's talk about your content and your brand." />
+<meta property="og:url" content="https://kumarbagri.github.io/contentmind-ai/contact.html" />
+<meta property="og:image" content="https://kumarbagri.github.io/contentmind-ai/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%237c5cff'/><text x='50' y='71' font-size='60' font-family='Arial' font-weight='bold' text-anchor='middle' fill='white'>C</text></svg>" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav aria-label="Main">
+  <div class="wrap nav-in">
+    <a href="index.html" class="brand"><span class="logo">C</span> ContentMind <span class="grad">AI</span></a>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html" class="btn btn-primary" style="padding:9px 18px">Get in touch</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <span class="kicker">Contact</span>
+    <h1>Let's make your ideas impossible to ignore.</h1>
+    <p>Whether you need a ghostwriter, an AI content system, or a strategy for your personal brand — send a message and let's talk.</p>
+  </div>
+</header>
+
+<section style="padding-top:16px">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <div class="info-card"><h4>Email</h4><a href="mailto:dhirendrabagri@zohomail.in">dhirendrabagri@zohomail.in</a></div>
+        <div class="info-card"><h4>LinkedIn</h4><a href="https://www.linkedin.com/in/dhirendra-bagri-69977031b" target="_blank" rel="noopener">linkedin.com/in/dhirendra-bagri-69977031b</a></div>
+        <div class="info-card"><h4>Location</h4><div>Kota, Rajasthan, India</div></div>
+        <div class="info-card"><h4>Response time</h4><div>Usually within 24–48 hours</div></div>
+      </div>
+
+      <div>
+        <h2 style="font-size:1.3rem;margin-bottom:16px">Send a message</h2>
+        <form class="form" id="contactForm">
+          <div>
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div>
+            <label for="email">Your email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </div>
+          <div>
+            <label for="msg">Message</label>
+            <textarea id="msg" name="msg" placeholder="What are you trying to build?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="justify-content:center">Send message →</button>
+          <p class="note">This opens your email app with the message pre-filled, addressed to dhirendrabagri@zohomail.in.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-in">
+    <div>© <span id="year"></span> ContentMind AI · Founded by Dr Dhirendra Bagri</div>
+    <div><a href="https://www.linkedin.com/in/dhirendra-bagri-69977031b" target="_blank" rel="noopener">LinkedIn</a> &nbsp;·&nbsp; <a href="mailto:dhirendrabagri@zohomail.in">Email</a></div>
+  </div>
+</footer>
+
+<script src="posts.js"></script>
+<script src="main.js"></script>
+<script>
+(function(){
+  var f = document.getElementById("contactForm");
+  if (!f) return;
+  f.addEventListener("submit", function(e){
+    e.preventDefault();
+    var n = encodeURIComponent(document.getElementById("name").value);
+    var em = encodeURIComponent(document.getElementById("email").value);
+    var m = encodeURIComponent(document.getElementById("msg").value);
+    var subject = encodeURIComponent("Website enquiry from " + document.getElementById("name").value);
+    var body = "Name: " + document.getElementById("name").value + "%0D%0AEmail: " + document.getElementById("email").value + "%0D%0A%0D%0A" + m;
+    window.location.href = "mailto:dhirendrabagri@zohomail.in?subject=" + subject + "&body=" + body;
+  });
+})();
+</script>
+</body>
+</html>
