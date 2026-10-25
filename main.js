@@ -7,7 +7,7 @@ function fmtDate(iso){
   if (grid && typeof POSTS !== "undefined") {
     var limit = grid.dataset.limit ? parseInt(grid.dataset.limit, 10) : POSTS.length;
     grid.innerHTML = POSTS.slice(0, limit).map(function(p){
-      var href = p.slug ? ("post.html?p=" + encodeURIComponent(p.slug)) : "blog.html";
+      var href = p.slug ? ("blog-" + p.slug + ".html") : "blog.html";
       return '<a class="post" href="' + href + '">' +
         '<div class="thumb" aria-hidden="true"><span></span></div>' +
         '<div class="body">' +
