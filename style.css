@@ -182,3 +182,8 @@
 .note{font-size:.85rem;color:var(--muted);margin-top:10px}
 .center{text-align:center}
 .mt{margin-top:32px}
+
+/* clickable blog cards */
+a.post{text-decoration:none;color:inherit}
+a.post:hover h3{color:var(--accent2)}
+a.post .readmore{margin-top:auto;font-size:.86rem;font-weight:700;color:var(--accent2)}
