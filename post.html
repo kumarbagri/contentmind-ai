@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Article — ContentMind AI</title>
+<meta name="description" content="Insights on AI, content and founder growth from ContentMind AI." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://kumarbagri.github.io/contentmind-ai/blog.html" />
+<meta name="theme-color" content="#08080f" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="ContentMind AI" />
+<meta property="og:title" content="Article — ContentMind AI" />
+<meta property="og:description" content="Insights on AI, content and founder growth." />
+<meta property="og:image" content="https://kumarbagri.github.io/contentmind-ai/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%237c5cff'/><text x='50' y='71' font-size='60' font-family='Arial' font-weight='bold' text-anchor='middle' fill='white'>C</text></svg>" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav aria-label="Main">
+  <div class="wrap nav-in">
+    <a href="index.html" class="brand"><span class="logo">C</span> ContentMind <span class="grad">AI</span></a>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html" class="btn btn-primary" style="padding:9px 18px">Get in touch</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" style="max-width:800px;padding:52px 24px 24px">
+  <a href="blog.html" style="color:var(--muted);font-size:.9rem">← All posts</a>
+  <article id="article" style="margin-top:20px"></article>
+</main>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <h2>Want content like this <span class="grad">for your brand?</span></h2>
+      <p>ContentMind AI turns these ideas into a steady stream of posts that sound like you.</p>
+      <div class="hero-cta">
+        <a href="contact.html" class="btn btn-primary">Work with us →</a>
+        <a href="mailto:dhirendrabagri@zohomail.in" class="btn btn-ghost">dhirendrabagri@zohomail.in</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-in">
+    <div>© <span id="year"></span> ContentMind AI · Founded by Dr Dhirendra Bagri</div>
+    <div><a href="https://www.linkedin.com/in/dhirendra-bagri-69977031b" target="_blank" rel="noopener">LinkedIn</a> &nbsp;·&nbsp; <a href="mailto:dhirendrabagri@zohomail.in">Email</a></div>
+  </div>
+</footer>
+
+<script src="posts.js"></script>
+<script>
+(function(){
+  var params = new URLSearchParams(location.search);
+  var slug = params.get("p");
+  var post = (typeof POSTS !== "undefined") ? POSTS.find(function(x){ return x.slug === slug; }) : null;
+  var el = document.getElementById("article");
+  var y = document.getElementById("year"); if (y) y.textContent = new Date().getFullYear();
+
+  function setMeta(sel, attr, val){ var n = document.querySelector(sel); if (n) n.setAttribute(attr, val); }
+
+  if (!post) {
+    document.title = "Post not found — ContentMind AI";
+    el.innerHTML = '<h1 style="font-size:2rem;letter-spacing:-.02em;margin-bottom:12px">Post not found</h1>' +
+      '<p class="note">That post doesn\'t exist. <a href="blog.html" style="color:var(--accent2)">See all posts →</a></p>';
+    return;
+  }
+
+  document.title = post.title + " — ContentMind AI";
+  setMeta('meta[name="description"]', "content", post.excerpt);
+  setMeta('meta[property="og:title"]', "content", post.title);
+  setMeta('meta[property="og:description"]', "content", post.excerpt);
+  setMeta('link[rel="canonical"]', "href", "https://kumarbagri.github.io/contentmind-ai/post.html" + encodeURIComponent(post.slug));
+
+  var paras = (post.body || post.excerpt).split(/\n\s*\n/).map(function(t){ return "<p>" + t.trim() + "</p>"; }).join("");
+  var d = new Date(post.date + "T00:00:00");
+  var ds = d.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+
+  el.innerHTML =
+    '<div style="display:flex;gap:12px;align-items:center;font-size:.82rem;color:var(--muted)">' +
+      '<span class="tag">' + post.tag + '</span><span>' + ds + '</span>' +
+    '</div>' +
+    '<h1 style="font-size:clamp(1.9rem,4.4vw,2.9rem);letter-spacing:-.03em;line-height:1.12;margin:16px 0 24px">' + post.title + '</h1>' +
+    '<div class="prose" style="font-size:1.07rem">' + paras + '</div>' +
+    '<div style="margin-top:36px;padding-top:22px;border-top:1px solid var(--line)">' +
+      '<a href="blog.html" class="btn btn-ghost">← Back to all posts</a>' +
+    '</div>';
+})();
+</script>
+</body>
+</html>
