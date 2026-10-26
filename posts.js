@@ -1,6 +1,11 @@
 /* Blog posts — newest first. Each post: date, tag, title, slug, excerpt, body.
    The daily job inserts new posts at the top. */
 const POSTS = [
+  { date: "2026-10-26", tag: "LinkedIn Growth", title: "Your comments are doing more for you than your posts",
+    slug: "comments-are-doing-more-than-your-posts",
+    excerpt: "Most founders spend their LinkedIn energy on publishing. The quieter, higher-return habit is commenting well on a handful of posts each week.",
+    body: "Most founders treat LinkedIn as a broadcast channel. They publish, refresh the notifications, and wonder why reach feels flat. Meanwhile the people whose names keep showing up in their feed are usually doing something quieter: commenting.\n\nA good comment is a small audition. It lands in front of an audience you have not earned yet — the readers of someone else's post — and it costs you ninety seconds instead of an hour.\n\nWhat makes one work: add something the post did not say. A specific example, a number from your own experience, a respectful disagreement. \"Great post\" and \"So true\" are invisible. A short paragraph that makes the author reply is a doorway.\n\nPick five to ten people whose audience overlaps with yours — peers, customers, operators you respect. Comment on their work for two weeks before you expect anything back. Most of them will notice.\n\nThe compounding part: every comment puts your name in front of their readers. Keep at it and people start checking your profile before they have read a single post of yours.\n\nPosting builds the house. Commenting walks people to the door." },
+
   { date: "2026-10-25", tag: "Content Strategy", title: "One idea, seven posts: the founder's content multiplier",
     slug: "one-idea-seven-posts",
     excerpt: "You don't need seven new ideas every week — you need one strong one, cut seven ways. Here is the simple system.",
