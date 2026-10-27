@@ -1,6 +1,11 @@
 /* Blog posts — newest first. Each post: date, tag, title, slug, excerpt, body.
    The daily job inserts new posts at the top. */
 const POSTS = [
+  { date: "2026-10-27", tag: "Founder Brand", title: "The ghostwriter question every founder eventually asks",
+    slug: "ghostwriter-question-for-founders",
+    excerpt: "Handing over the assembly of a post is not the same as handing over your voice. Here is how to tell the difference before you hire.",
+    body: "At some point every founder who posts consistently hits the same wall: the ideas are there, the time is not. That is usually when the word ghostwriter enters the conversation, followed quickly by discomfort.\n\nThe discomfort is worth naming. A ghostwriter is not there to invent a personality for you. The good ones do the opposite — they interview you, listen to how you explain things on a call, and pull out the phrases you already use. The writing sounds like you because it is built from you.\n\nWhat you actually hand over is the assembly. The thinking stays yours: the opinions, the stories, the numbers, the things you would defend in a room. What you get back is someone who turns a twenty-minute voice note into a post you would have written if you had two quiet hours.\n\nThe trap is hiring someone to manufacture authority you have not earned. Ghostwritten content that contains no real experience reads hollow, and readers can tell. They may not name it, but they scroll past it.\n\nA practical test before you hire: send them a voice note and ask for one post. If it sounds like a stranger wrote it, keep looking. If it sounds like a better-edited version of you, you have found your person. Then protect the input — the voice note habit is what keeps the output honest." },
+
   { date: "2026-10-26", tag: "LinkedIn Growth", title: "Your comments are doing more for you than your posts",
     slug: "comments-are-doing-more-than-your-posts",
     excerpt: "Most founders spend their LinkedIn energy on publishing. The quieter, higher-return habit is commenting well on a handful of posts each week.",
