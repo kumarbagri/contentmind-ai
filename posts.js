@@ -1,6 +1,11 @@
 /* Blog posts — newest first. Each post: date, tag, title, slug, excerpt, body.
    The daily job inserts new posts at the top. */
 const POSTS = [
+  { date: "2026-10-28", tag: "AI & Workflow", title: "The three-line brief that fixes most AI drafts",
+    slug: "three-line-brief-for-ai-drafts",
+    excerpt: "Better AI drafts come from a better brief, not a better model. Three lines of context do more than any prompt trick.",
+    body: "Ask ten people whether their AI drafts sound like them and nine will say no. The fix is rarely a better model. It is a better brief.\n\nMost prompts fail because they describe the task and skip the context. You write \"write a LinkedIn post about hiring\" and get something generic, because generic is all you gave it. Three lines of context change the output more than any prompt trick.\n\nLine one: who is reading this. Not \"founders\" but \"seed-stage founders hiring their first engineer and scared of getting it wrong.\" Specificity forces the model to pick a register instead of averaging everyone.\n\nLine two: what you want the reader to do or believe by the end. One sentence. If you cannot write that sentence, the post has no point yet and no model will supply one.\n\nLine three: what to leave out. Phrases you hate, claims you cannot back, the em-dash habit, the \"in today's fast-paced world\" opener. A short ban list is the fastest quality upgrade available to you.\n\nThen add the one thing only you have: a real number, a real objection, something that happened last week. The model cannot invent your experience, and readers can feel when it tries.\n\nKeep the brief in a note and reuse it. After a week you have a template that turns a rough thought into a draft worth editing rather than rewriting." },
+
   { date: "2026-10-27", tag: "Founder Brand", title: "The ghostwriter question every founder eventually asks",
     slug: "ghostwriter-question-for-founders",
     excerpt: "Handing over the assembly of a post is not the same as handing over your voice. Here is how to tell the difference before you hire.",
