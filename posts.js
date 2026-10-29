@@ -1,6 +1,11 @@
 /* Blog posts — newest first. Each post: date, tag, title, slug, excerpt, body.
    The daily job inserts new posts at the top. */
 const POSTS = [
+  { date: "2026-10-29", tag: "AI", title: "Stop asking AI for ideas. Ask it for objections.",
+    slug: "stop-asking-ai-for-ideas-ask-for-objections",
+    excerpt: "Idea generation is what AI does worst. Turn the request around and ask what a skeptical reader would argue with, and the drafts get sharper fast.",
+    body: "Most people open a chat window, type “give me ten post ideas about hiring,” and close it disappointed. The ideas are fine and forgettable. The problem is the request. Idea generation is the one thing a model does worst, because it has no stake in the outcome and no experience to draw on.\n\nTry the opposite. Write the post first, badly, in five minutes. Then paste it in and ask what a skeptical reader would push back on. The output changes immediately. Instead of ten interchangeable headlines you get the three claims that need evidence, the sentence that reads like a press release, the argument you skipped.\n\nThis works because critique is a narrower task than creation. You have supplied the point of view; the model only has to test it. It is also faster to accept or reject than to generate from nothing.\n\nFour questions worth keeping in a note: What is the strongest objection to this post? Which sentence would a smart reader stop trusting? What am I implying that I have not said? Where does this sound like everyone else?\n\nThen rewrite one paragraph by hand, using the best objection as material. Not the whole post — one paragraph. The draft that survives a hostile reading is the one worth publishing, and those objections are usually the comments you would have received anyway. Better to meet them in the draft than in the replies." },
+
   { date: "2026-10-28", tag: "AI & Workflow", title: "The three-line brief that fixes most AI drafts",
     slug: "three-line-brief-for-ai-drafts",
     excerpt: "Better AI drafts come from a better brief, not a better model. Three lines of context do more than any prompt trick.",
