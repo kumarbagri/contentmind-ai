@@ -1,6 +1,11 @@
 /* Blog posts — newest first. Each post: date, tag, title, slug, excerpt, body.
    The daily job inserts new posts at the top. */
 const POSTS = [
+  { date: "2026-10-30", tag: "Content Strategy", title: "Your sales calls are a content calendar you never wrote down",
+    slug: "your-sales-calls-are-a-content-calendar",
+    excerpt: "The questions prospects ask you on calls are the questions your next ten posts should answer. Most founders never write them down.",
+    body: "Ask a founder where their content ideas come from and they will usually say reading, or the news, or whatever someone else posted last week. Almost nobody says the sales call they had on Tuesday.\n\nThat is the most underused source they have. Every week you answer the same four or five objections. Why is this expensive? What happens if we outgrow it? How is this different from the tool we already pay for? Each of those is a post, already tested on a real person, already phrased in your own words.\n\nThe practice is simple. Keep a note open during calls. Every time you hear a question you have answered before, write down the question, not the answer. Questions are the raw material; answers are easy once you have them.\n\nAt the end of the month, group them. You will find three or four that repeat, and those are not posts, they are a series: one question, answered properly, once a week, for a month.\n\nThe advantage is that this content cannot be copied. Your competitors read the same newsletters you read. They cannot sit in your calls.\n\nMost founders write content to attract the customers they want. The faster path is to answer the customers you already have, in public, where the next ones can hear it." },
+
   { date: "2026-10-29", tag: "AI", title: "Stop asking AI for ideas. Ask it for objections.",
     slug: "stop-asking-ai-for-ideas-ask-for-objections",
     excerpt: "Idea generation is what AI does worst. Turn the request around and ask what a skeptical reader would argue with, and the drafts get sharper fast.",
