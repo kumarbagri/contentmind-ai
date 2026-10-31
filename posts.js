@@ -1,6 +1,11 @@
 /* Blog posts — newest first. Each post: date, tag, title, slug, excerpt, body.
    The daily job inserts new posts at the top. */
 const POSTS = [
+  { date: "2026-10-31", tag: "LinkedIn Growth", title: "Your LinkedIn headline is a landing page, not a job title",
+    slug: "your-linkedin-headline-is-a-landing-page-not-a-job-title",
+    excerpt: "The line under your name appears on every post, comment and search result you ever show up in. Most founders spend it on a job title nobody asked for.",
+    body: "Open a stranger's profile and you read two things before deciding anything: the photo, and the line under the name. Everything else is below the fold. Most founders spend that prime real estate on a job title that answers a question nobody asked.\n\n\"Founder & CEO at Acme\" tells a visitor where you work. It does not tell them why they should keep reading. A headline is the only sentence guaranteed to appear on every post you write, every comment you leave, every time you come up in a search. It is a landing page with the highest traffic on your account and the fewest edits.\n\nThree things earn a click or a follow: who you help, what you help them do, and a reason to believe you. \"I help seed-stage founders turn sales calls into a content pipeline. 200+ calls recorded\" does all three inside one line of scrolling.\n\nThe test is simple. Show the headline to someone outside your company and ask what problem you solve. If they need your About section to answer, rewrite it.\n\nThen leave it alone for a quarter. The mistake people make after fixing a headline is fixing it every week, which means no visitor ever sees the version you settled on." },
+
   { date: "2026-10-30", tag: "Content Strategy", title: "Your sales calls are a content calendar you never wrote down",
     slug: "your-sales-calls-are-a-content-calendar",
     excerpt: "The questions prospects ask you on calls are the questions your next ten posts should answer. Most founders never write them down.",
