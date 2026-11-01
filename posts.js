@@ -1,6 +1,11 @@
 /* Blog posts — newest first. Each post: date, tag, title, slug, excerpt, body.
    The daily job inserts new posts at the top. */
 const POSTS = [
+  { date: "2026-11-01", tag: "Founder Brand", title: "Your personal brand compounds only when you repeat yourself",
+    slug: "your-personal-brand-compounds-only-when-you-repeat-yourself",
+    excerpt: "Founders hunt for new ideas because saying the same thing twice feels lazy. But audiences forget everything except the point you keep coming back to.",
+    body: "Most founders worry about repeating themselves. They have already said the thing about pricing, or hiring, or why the category is mispriced, and now they feel they cannot say it again. So they go looking for a new idea, and the new idea is almost always weaker than the one they abandoned.\n\nRepetition is how a brand gets built. You hear a song once and forget it; you hear the chorus eleven times and can hum it. Your audience is not reading everything you publish. The average person sees maybe one post in ten, at whatever hour the algorithm decides to show it. What feels like the fourth time to you is the first time to most of them.\n\nThe fix is not to publish the same sentence again. It is to return to the same idea through a different door: a client story, a mistake you made, a number from your own dashboard, a disagreement with advice everyone else is repeating. Same thesis, new evidence. That is not repetition, it is accumulation.\n\nSo keep a short list of the three or four things you actually believe about your market. Rotate through them deliberately, one at a time, and let each pass get sharper. Novelty is what your competitors chase. Repetition is what makes you the person people quote.",
+  },
   { date: "2026-10-31", tag: "LinkedIn Growth", title: "Your LinkedIn headline is a landing page, not a job title",
     slug: "your-linkedin-headline-is-a-landing-page-not-a-job-title",
     excerpt: "The line under your name appears on every post, comment and search result you ever show up in. Most founders spend it on a job title nobody asked for.",
