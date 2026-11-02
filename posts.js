@@ -1,6 +1,11 @@
 /* Blog posts — newest first. Each post: date, tag, title, slug, excerpt, body.
    The daily job inserts new posts at the top. */
 const POSTS = [
+  { date: "2026-11-02", tag: "AI & Workflow", title: "The redaction habit: using AI on client work without leaking it",
+    slug: "the-redaction-habit-using-ai-on-client-work-without-leaking-it",
+    excerpt: "The tasks where AI would save the most time are the ones full of client names and confidential numbers. Redacting the prompt first is what makes them usable.",
+    body: "Founders adopt AI fastest in the place where the risk is highest: client work. The draft that would save the most time is the one full of names, revenue figures and a confidential roadmap. So the tool gets used on the safe, generic tasks, and the real leverage stays untouched.\n\nThe habit that fixes this is redaction, done before the prompt rather than after it.\n\nSwap the client name for a role: \"a Series A fintech with 40 employees\" tells a model everything it needs. Swap absolute numbers for ratios. \"Churn went from 4% to 7% in two quarters\" is as useful as the real figures and is not a leak. Keep the sequence of a roadmap, drop the dates. Keep the sentence you are struggling with, delete the sentence that identifies who wrote it.\n\nWrite the redacted version once and save it as a template. Most founders rewrite the same kind of client story every month, so the placeholder list collapses into a five-line check you run in your head: names, numbers, dates, unreleased plans, anything a competitor could act on.\n\nThe test is one question. If this prompt leaked tomorrow, would you be embarrassed or in breach? If yes, redact it. That is not a reason to avoid AI on client work. It is the reason you can finally use it there.",
+  },
   { date: "2026-11-01", tag: "Founder Brand", title: "Your personal brand compounds only when you repeat yourself",
     slug: "your-personal-brand-compounds-only-when-you-repeat-yourself",
     excerpt: "Founders hunt for new ideas because saying the same thing twice feels lazy. But audiences forget everything except the point you keep coming back to.",
