@@ -74,10 +74,18 @@ for (const p of POSTS) {
   const url = BASE + "blog-" + p.slug + ".html";
   const paras = (p.body || p.excerpt).split(/\n\s*\n/)
     .map(t => "        <p>" + esc(t.trim()) + "</p>").join("\n");
+  const words = (p.body || p.excerpt).split(/\s+/).length;
+  const mins = Math.max(1, Math.round(words / 200));
+  const enc = encodeURIComponent(url);
+  const encT = encodeURIComponent(p.title);
+  const related = POSTS.filter(q => q.slug && q.slug !== p.slug)
+    .sort((a, b) => (b.tag === p.tag) - (a.tag === p.tag)).slice(0, 3);
+  const relatedHtml = related.map(q => '<a class="post" href="blog-' + q.slug + '.html"><div class="body"><div class="meta"><span class="tag">' + esc(q.tag) + '</span></div><h3>' + esc(q.title) + '</h3><span class="readmore">Read \u2192</span></div></a>').join("\n");
   const ld = JSON.stringify({
     "@context": "https://schema.org", "@type": "BlogPosting",
-    headline: p.title, description: p.excerpt, datePublished: p.date,
-    author: { "@type": "Person", name: "Dr Dhirendra Bagri" },
+    headline: p.title, description: p.excerpt, datePublished: p.date, dateModified: p.date,
+    wordCount: words, articleSection: p.tag, inLanguage: "en",
+    author: { "@type": "Person", name: "Dr Dhirendra Bagri", url: "https://www.linkedin.com/in/dhirendra-bagri-69977031b" },
     publisher: { "@type": "Organization", name: "ContentMind AI" },
     mainEntityOfPage: url, image: BASE + "og-image.png"
   });
@@ -103,6 +111,7 @@ for (const p of POSTS) {
 <meta name="twitter:description" content="${esc(p.excerpt)}" />
 <meta name="twitter:image" content="${BASE}og-image.png" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%237c5cff'/><text x='50' y='71' font-size='60' font-family='Arial' font-weight='bold' text-anchor='middle' fill='white'>C</text></svg>" />
+<link rel="alternate" type="application/rss+xml" title="ContentMind AI Blog" href="${BASE}rss.xml" />
 <script type="application/ld+json">${ld}</script>
 </head>
 <body>
@@ -113,13 +122,29 @@ ${NAV}
   <a href="blog.html" style="color:var(--muted);font-size:.9rem">← All posts</a>
   <article style="margin-top:20px">
     <div style="display:flex;gap:12px;align-items:center;font-size:.82rem;color:var(--muted)">
-      <span class="tag">${esc(p.tag)}</span><span>${dLong(p.date)}</span>
+      <span class="tag">${esc(p.tag)}</span><span>${dLong(p.date)}</span><span>· ${mins} min read</span><span>· By Dr Dhirendra Bagri</span>
     </div>
     <h1 style="font-size:clamp(1.9rem,4.4vw,2.9rem);letter-spacing:-.03em;line-height:1.12;margin:16px 0 24px">${esc(p.title)}</h1>
     <div class="prose" style="font-size:1.07rem">
 ${paras}
     </div>
-    <div style="margin-top:36px;padding-top:22px;border-top:1px solid var(--line)">
+    <div class="share" style="margin-top:36px;padding-top:22px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:10px;align-items:center">
+      <strong style="margin-right:6px">Found this useful? Share it:</strong>
+      <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=${enc}">LinkedIn</a>
+      <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://wa.me/?text=${encT}%20${enc}">WhatsApp</a>
+      <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?text=${encT}&url=${enc}">X</a>
+      <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://t.me/share/url?url=${enc}&text=${encT}">Telegram</a>
+    </div>
+    <div style="margin-top:28px;padding:22px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card)">
+      <strong>Get one practical AI idea every day.</strong>
+      <p style="color:var(--muted);margin:6px 0 14px">Free. No spam. Follow ContentMind AI where you already are.</p>
+      <div class="hero-cta"><a class="btn btn-primary" target="_blank" rel="noopener" href="https://www.linkedin.com/company/contentmind-ai/">Follow on LinkedIn</a><a class="btn btn-ghost" target="_blank" rel="noopener" href="https://t.me/ContentMindAI">Join on Telegram</a></div>
+    </div>
+    <h2 style="margin:40px 0 16px;font-size:1.4rem">Keep reading</h2>
+    <div class="posts">
+${relatedHtml}
+    </div>
+    <div style="margin-top:28px">
       <a href="blog.html" class="btn btn-ghost">← Back to all posts</a>
     </div>
   </article>
@@ -159,12 +184,21 @@ for (const f of ["about.html", "services.html", "contact.html"]) {
 // ---- 4. sitemap ----
 let urls = [["", "1.0", "daily"], ["about.html", "0.8", null], ["services.html", "0.9", null],
   ["blog.html", "0.8", "daily"], ["contact.html", "0.7", null]];
-for (const p of POSTS) if (p.slug) urls.push(["blog-" + p.slug + ".html", "0.6", null]);
+const TODAY = new Date().toISOString().slice(0, 10);
+for (const p of POSTS) if (p.slug) urls.push(["blog-" + p.slug + ".html", "0.6", null, p.date]);
 let sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-for (const [u, pr, cf] of urls) {
-  sm += "  <url><loc>" + BASE + u + "</loc>" + (cf ? "<changefreq>" + cf + "</changefreq>" : "") + "<priority>" + pr + "</priority></url>\n";
+for (const [u, pr, cf, lm] of urls) {
+  sm += "  <url><loc>" + BASE + u + "</loc><lastmod>" + (lm || TODAY) + "</lastmod>" + (cf ? "<changefreq>" + cf + "</changefreq>" : "") + "<priority>" + pr + "</priority></url>\n";
 }
 sm += "</urlset>\n";
 fs.writeFileSync(path.join(DIR, "sitemap.xml"), sm);
+
+// ---- 5. RSS feed ----
+let rss = '<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel>\n<title>ContentMind AI Blog</title>\n<link>' + BASE + 'blog.html</link>\n<description>Practical AI, content and growth ideas, daily.</description>\n<language>en</language>\n';
+for (const p of POSTS.slice(0, 30)) if (p.slug) {
+  rss += '<item><title>' + esc(p.title) + '</title><link>' + BASE + 'blog-' + p.slug + '.html</link><guid>' + BASE + 'blog-' + p.slug + '.html</guid><pubDate>' + new Date(p.date + "T06:00:00Z").toUTCString() + '</pubDate><category>' + esc(p.tag) + '</category><description>' + esc(p.excerpt) + '</description></item>\n';
+}
+rss += '</channel></rss>\n';
+fs.writeFileSync(path.join(DIR, "rss.xml"), rss);
 
 console.log("done: listings filled, CSS inlined, sitemap rebuilt");
