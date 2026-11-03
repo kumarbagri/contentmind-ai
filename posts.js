@@ -1,6 +1,11 @@
 /* Blog posts — newest first. Each post: date, tag, title, slug, excerpt, body.
    The daily job inserts new posts at the top. */
 const POSTS = [
+  { date: "2026-11-03", tag: "AI", title: "The monthly AI stack audit: keep three tools, cancel the rest",
+    slug: "the-monthly-ai-stack-audit-keep-three-tools-cancel-the-rest",
+    excerpt: "Most AI subscriptions survive because they are cheap and nobody checks them. A fifteen-minute monthly audit tells you which three tools actually earn their place.",
+    body: "Most founders now pay for four or five AI tools and could not say which one earned its money last month. Subscriptions are small enough to survive any budget review, so they accumulate: the transcription tool you tried in March, the writing assistant nobody has opened since April, two chat subscriptions sitting on different cards.\n\nRun a monthly audit instead. It takes fifteen minutes and it changes how you buy.\n\nFirst, list every AI subscription with its monthly cost and total it. The number is usually larger than people guess.\n\nSecond, for each tool, write the last thing you actually used it for, with a date. If you cannot name a specific task from the past thirty days, that tool is not part of your workflow. It is a habit of optimism.\n\nThird, check overlap. Most stacks have two tools doing the same job: two chat assistants, two meeting recorders, three ways to summarise a document. Pick the one you reach for without thinking and cancel the rest.\n\nFourth, keep exactly one experimental slot, with a decision date attached. Everything else has to earn its place with real work.\n\nThe point is not saving a few hundred rupees a month. It is knowing which three tools you actually rely on, so you can learn them properly instead of half-using eight. Depth beats breadth with AI, and a small stack is far easier to get deep in.",
+  },
   { date: "2026-11-02", tag: "AI & Workflow", title: "The redaction habit: using AI on client work without leaking it",
     slug: "the-redaction-habit-using-ai-on-client-work-without-leaking-it",
     excerpt: "The tasks where AI would save the most time are the ones full of client names and confidential numbers. Redacting the prompt first is what makes them usable.",
