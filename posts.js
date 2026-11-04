@@ -1,6 +1,10 @@
 /* Blog posts — newest first. Each post: date, tag, title, slug, excerpt, body.
    The daily job inserts new posts at the top. */
 const POSTS = [
+  { date: "2026-11-04", tag: "Content Strategy", title: "Ten evergreen posts beat a hundred forgettable ones",
+    slug: "ten-evergreen-posts-beat-a-hundred-forgettable-ones",
+    excerpt: "A hundred posts nobody revisits is a hobby. Ten posts that answer the questions buyers actually ask, kept current, is a content strategy.",
+    body: "Every founder who posts daily eventually hits the same wall: the calendar is full, the ideas are thin, and the posts that did well are buried three scrolls deep. The fix is not more posts. It is a small set of posts you can point at for a year.\n\nPick ten questions your buyers actually ask before they buy. Not the ones you wish they asked, but the ones that turn up in your inbox, on sales calls, in the first five minutes of a demo. Each question becomes one piece that answers it completely: the numbers, the trade-offs, and the case where your answer is no.\n\nWrite them once, well. Then treat them as an asset rather than an archive. Link the relevant one in a sales follow-up. Pin the best one to your profile. Paste it into a comment thread instead of retyping the same answer for the tenth time. Refresh the numbers every quarter so they stay true.\n\nThe result looks like less activity and produces more pipeline. A hundred posts nobody revisits is a hobby. Ten posts that settle arguments, in front of the right people, is a content strategy.\n\nVolume is easy to measure and easy to fake. Depth is what a buyer remembers when they are deciding whether to reply." },
   { date: "2026-11-03", tag: "AI", title: "The monthly AI stack audit: keep three tools, cancel the rest",
     slug: "the-monthly-ai-stack-audit-keep-three-tools-cancel-the-rest",
     excerpt: "Most AI subscriptions survive because they are cheap and nobody checks them. A fifteen-minute monthly audit tells you which three tools actually earn their place.",
