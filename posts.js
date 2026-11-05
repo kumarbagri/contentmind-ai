@@ -1,6 +1,10 @@
 /* Blog posts — newest first. Each post: date, tag, title, slug, excerpt, body.
    The daily job inserts new posts at the top. */
 const POSTS = [
+  { date: "2026-11-05", tag: "LinkedIn Growth", title: "The 200-word ceiling: shorter LinkedIn posts get finished",
+    slug: "the-200-word-ceiling-shorter-linkedin-posts-get-finished",
+    excerpt: "Most posts are abandoned at the halfway point. Cutting to 200 words is the cheapest way to earn a read to the end, and the reply that follows.",
+    body: "Look at your last ten posts and count the words. If most run past 350, you are asking a stranger scrolling between meetings to make a decision about your idea three times. They rarely do.\n\nLinkedIn rewards completion. A post read to the end earns the click, the comment, the profile visit. A post abandoned at the halfway point earns nothing, however good the second half was.\n\nThe 200-word ceiling forces the discipline a longer draft lets you avoid. One idea, stated plainly in the first line. Two or three short paragraphs that earn it. A close that either asks a real question or makes a claim worth arguing with. Anything that does not serve that structure gets cut.\n\nThe usual objection is that nuance disappears. It rarely does. Most long posts contain one idea and a lot of throat-clearing. Cutting to 200 words does not remove the substance, it removes the reasons a reader stops before reaching it.\n\nTry it for a week. Take each draft, cut it in half, then delete the first paragraph and see whether the post still opens. Often it opens better. What is left is the post you would have wanted to read." },
   { date: "2026-11-04", tag: "Content Strategy", title: "Ten evergreen posts beat a hundred forgettable ones",
     slug: "ten-evergreen-posts-beat-a-hundred-forgettable-ones",
     excerpt: "A hundred posts nobody revisits is a hobby. Ten posts that answer the questions buyers actually ask, kept current, is a content strategy.",
