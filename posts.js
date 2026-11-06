@@ -1,6 +1,10 @@
 /* Blog posts — newest first. Each post: date, tag, title, slug, excerpt, body.
    The daily job inserts new posts at the top. */
 const POSTS = [
+  { date: "2026-11-06", tag: "Founder Brand", title: "Ghostwritten posts start in a conversation, not a brief",
+    slug: "ghostwritten-posts-start-in-a-conversation-not-a-brief",
+    excerpt: "A brief produces a post about hiring. A recorded conversation produces the story about nearly firing the hire. Only one of them gets read.",
+    body: "A ghostwritten post usually fails for one reason: it was written from a brief instead of a conversation. The brief says write about hiring. The conversation says we hired a head of sales in March and I nearly let him go in June because I was measuring the wrong thing. Only one of those is worth reading.\n\nSo the cheapest fix for a founder's content is not a better prompt or a faster tool. It is forty-five minutes of recorded conversation, once a month, with someone whose only job is to ask the next question.\n\nThat interviewer's brief is narrow. Ask what changed at the company this month. Ask what the founder got wrong. Ask which customer call stayed with them afterwards. Then keep pushing on the vague answers, because the specific detail is almost always one question deeper than the first reply.\n\nTranscribe it, then pull the three or four moments where the founder said something they would never have written down. Those are the posts. The rest is filler.\n\nThe founder's part is to speak honestly and then approve, not to draft. That division of labour holds for AI-assisted teams too: a model can shape a paragraph, but it cannot invent the March hiring story.\n\nOne conversation, four posts, and a voice that still sounds like the person it belongs to." },
   { date: "2026-11-05", tag: "LinkedIn Growth", title: "The 200-word ceiling: shorter LinkedIn posts get finished",
     slug: "the-200-word-ceiling-shorter-linkedin-posts-get-finished",
     excerpt: "Most posts are abandoned at the halfway point. Cutting to 200 words is the cheapest way to earn a read to the end, and the reply that follows.",
