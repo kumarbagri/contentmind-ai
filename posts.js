@@ -1,6 +1,10 @@
 /* Blog posts — newest first. Each post: date, tag, title, slug, excerpt, body.
    The daily job inserts new posts at the top. */
 const POSTS = [
+  { date: "2026-11-15", tag: "LinkedIn Growth", title: "Most of your readers never press like, and that is fine",
+    slug: "most-of-your-readers-never-press-like-and-that-is-fine",
+    excerpt: "Reach without reactions looks like failure. Mostly it is just how feed reading works, and it should change what you write.",
+    body: "Check your post analytics against your follower count and the gap is uncomfortable. A post reaches a few thousand people and collects eleven likes. It is tempting to read that as failure. It is closer to the normal shape of attention on LinkedIn.\n\nMost people read in the feed, form an opinion, and scroll on. Liking is a public act. It tells their network, and sometimes their employer, that they are interested in what you said. For a founder posting about a hiring struggle or a pricing mistake, that is a real cost. So they read, nod, and say nothing.\n\nThis changes what a good post looks like. If you write only for the people who react, you drift toward agreement, easy wins and tidy endings. Write instead for the reader who will never announce themselves. Give them something usable: a number, a script, a decision rule they can carry into a meeting on Monday.\n\nTwo things follow. First, measure replies and profile views over likes. A quiet post that brings three DMs did its job. Second, ask directly. Once a month, end a post with a plain question and watch how many people answer in private. The lurkers are there. They just do not want an audience for their curiosity." },
   { date: "2026-11-14", tag: "Content Strategy", title: "A full drafts folder is a warning sign, not a strategy",
     slug: "a-full-drafts-folder-is-a-warning-sign-not-a-strategy",
     excerpt: "Forty unpublished drafts feels like a pipeline. It is usually a pile of decisions you keep avoiding. A 48-hour rule fixes it faster than any planning session.",
