@@ -1,6 +1,11 @@
 /* Blog posts — newest first. Each post: date, tag, title, slug, excerpt, body.
    The daily job inserts new posts at the top. */
 const POSTS = [
+  { date: "2026-11-16", tag: "Founder Brand", title: "The About page nobody updates is quietly costing you deals",
+    slug: "the-about-page-nobody-updates-is-quietly-costing-you-deals",
+    excerpt: "It is often the most-read page on your site and the least maintained. A stale About page quietly filters out the buyers you wanted.",
+    body: "Ask a founder when they last read their own About page and you usually get a pause. It was written quickly, before the company found its footing, and nobody has touched it since. It is also one of the few pages a serious buyer reads from top to bottom.\n\nThat gap is expensive. The About page is where a stranger decides whether you are worth a call. A version written two years ago describes a company that no longer exists: the old positioning, the old client type, the old ambition. The reader cannot tell that it is stale. They only know it does not quite fit.\n\nFix it in thirty minutes. Answer three questions in plain language. What were you doing before this, and what did that teach you that most people in your category do not know? Who is this actually for, named specifically enough that the wrong reader leaves? What are you building toward, in a sentence a customer would repeat to a colleague?\n\nThen cut the rest. The adjectives, the mission language, the list of values nobody reads. An About page works when it sounds like a person who has done the work, not a company describing itself." },
+
   { date: "2026-11-15", tag: "LinkedIn Growth", title: "Most of your readers never press like, and that is fine",
     slug: "most-of-your-readers-never-press-like-and-that-is-fine",
     excerpt: "Reach without reactions looks like failure. Mostly it is just how feed reading works, and it should change what you write.",
