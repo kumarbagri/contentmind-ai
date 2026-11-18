@@ -1,6 +1,10 @@
 /* Blog posts — newest first. Each post: date, tag, title, slug, excerpt, body.
    The daily job inserts new posts at the top. */
 const POSTS = [
+  { date: "2026-11-18", tag: "AI", title: "Let the AI interview you before it writes a word",
+    slug: "let-the-ai-interview-you-before-it-writes-a-word",
+    excerpt: "The fastest route to a draft that sounds like you is to make the model ask questions first, then answer them out loud.",
+    body: "Most people open an AI tool and start typing instructions. That is backwards. The model knows nothing about your week, the customer call you had on Monday, or the thing you noticed on Tuesday. So it fills the gap with averages, and averages read like everyone else.\n\nTry this instead. Paste a short brief and ask the model to interview you: eight questions, one at a time, no drafting yet. Good questions sound like this. What happened that made you want to write this? What did you believe before that turned out to be wrong? What would a sceptical reader push back on? What is the one sentence you would want repeated back to you?\n\nAnswer by voice memo, not by typing. Speech carries the specifics, the names, the numbers, the phrasing you actually use with clients, that a typed answer quietly strips out. Ten minutes of talking beats an hour of prompting.\n\nThen ask for a draft built only from your answers, and tell it to keep your phrasing wherever it can.\n\nThe interview costs five minutes and saves the rewrite. More importantly, the raw material comes from you, so the draft arrives with a point of view instead of a summary." },
   { date: "2026-11-17", tag: "AI & Workflow", title: "Your content backlog is a search problem, not a writing problem",
     slug: "your-content-backlog-is-a-search-problem-not-a-writing-problem",
     excerpt: "You probably do not need more ideas. You need a faster way to find the ones you already wrote down in emails, calls and chat threads.",
